@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python ML Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Python ML + Web Dashboard</p>
+                <h1>Smart User Manager</h1>
+                <p class="hero-copy">A modern CRUD dashboard with ML-powered recommendations and a polished visual design.</p>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="dashboard-grid">
+                <div class="card form-card">
+                    <div class="card-header">
+                        <h2>Add New User</h2>
+                        <span class="pill">ML Style</span>
+                    </div>
+
+                    <div class="input-row">
+                        <input type="text" id="name" placeholder="Enter name">
+                        <input type="number" id="age" placeholder="Enter age" min="1">
+                        <button onclick="createUser()">Save User</button>
+                    </div>
+
+                    <div class="hint-block">
+                        <p>Enter a name and age so the dashboard stores user details and recommends a style.</p>
+                    </div>
+                </div>
+
+                <div class="card recommendation-card" id="recommendationCard">
+                    <div class="card-header">
+                        <h2>Style Recommendation</h2>
+                        <span class="pill green">new</span>
+                    </div>
+                    <p id="recommendationText">Use the form to get the ML-generated theme suggestion.</p>
+                    <div class="theme-chip" id="themeName">Theme will appear here</div>
+                    <div class="theme-details" id="themeDetails"></div>
+                </div>
+            </section>
+
+            <section class="card table-card">
+                <div class="card-header">
+                    <h2>User List</h2>
+                    <span class="pill soft">Live data</span>
+                </div>
+                <div class="table-scroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userTable"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
